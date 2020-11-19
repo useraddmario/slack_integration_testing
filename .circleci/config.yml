@@ -5,9 +5,7 @@ workflows:
   slack_integration_testing:
     jobs:
       deploy_network_tier:
-        context:
-          - aws
-          - slack
+        context: [aws, slack]
 jobs:
   deploy_network_tier:
     docker:
