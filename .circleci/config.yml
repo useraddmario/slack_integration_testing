@@ -14,6 +14,11 @@ jobs:
     docker:
       - image: amazon/aws-cli
     steps:
+      - run:
+          name: Rollback network Infra
+          command: |
+            yum -y install jq
+
       - checkout
       - run:
           name: "Network Infra Deploy"
